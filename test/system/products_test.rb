@@ -7,20 +7,20 @@ class ProductsTest < ApplicationSystemTestCase
 
   test "visiting the index" do
     visit products_url
-    assert_selector "h1", text: "Products"
+    assert_selector "h1", text: "Lista de productos"
   end
 
   test "should create product" do
     visit products_url
-    click_on "New product"
+    click_on "Crear Producto"
 
     fill_in "Description", with: @product.description
     fill_in "Name", with: @product.name
     fill_in "Reference", with: @product.reference
-    click_on "Create Product"
+    click_on "Crear"
 
     assert_text "Product was successfully created"
-    click_on "Back"
+    click_on "Back to products"
   end
 
   test "should update Product" do
@@ -30,10 +30,10 @@ class ProductsTest < ApplicationSystemTestCase
     fill_in "Description", with: @product.description
     fill_in "Name", with: @product.name
     fill_in "Reference", with: @product.reference
-    click_on "Update Product"
+    click_on "Crear"
 
     assert_text "Product was successfully updated"
-    click_on "Back"
+    click_on "Back to products"
   end
 
   test "should destroy Product" do
